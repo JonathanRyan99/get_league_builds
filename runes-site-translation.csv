@@ -72,4 +72,4 @@ attack speed,axe,statmodsattackspeedicon
 ability haste,time,statmodscdrscalingicon
 armor,shield,statmodsarmoricon
 health,heart,statmodshealthscalingicon
-magic resist,circle,statmodsmagicresicon
+magic resist,circle,statmodsmagicresicon.magicresist_fix

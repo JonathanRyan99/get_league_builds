@@ -183,7 +183,3 @@ def scrapeAllURF(urls):
         
         #dely to not spam the site
         time.sleep(random.randrange(0,2))
-
-
-
-
