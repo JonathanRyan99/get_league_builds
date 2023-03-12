@@ -131,6 +131,28 @@ def getBestRunesAll(urls):
 #     file.write(link + "\n")
 
 
+def getChampName():
+    """returns list of top build url"""
+    champBuilds = []
+    try:
+        page = requests.get("https://www.mobafire.com/league-of-legends/champions")
+        soup = BeautifulSoup(page.content, "html.parser")
+
+        championTable = soup.find_all("a", class_="champ-list__item visible")
+        print("processing: "+ str(len(championTable)) + " champions")
+        
+        for champion in championTable:
+            #dont spam server
+            time.sleep(random.randrange(0,2))
+            
+            #get champs name
+            championName = champion.find("div", class_="champ-list__item__name")
+            championName = (championName.find("b")).text
+            print(championName)
+            
+    except(error): 
+        print(error)
+
 
 # print("links saved")
 
